@@ -1,13 +1,17 @@
-<div class="dashboard-wrapper">
-    <div class="dashboard-ecommerce">
-        <div class="container-fluid dashboard-content">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="page-header">
-                        <h2 class="pageheader-title"><?= esc($nama_page) ?></h2>
-                    </div>
-                </div>
+<div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title">
+                <h5 class="m-b-10"><?= esc($nama_page) ?></h5>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
             <div class="row">
                 <div class="col-md-12">

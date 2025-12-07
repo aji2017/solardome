@@ -1,18 +1,23 @@
-<div class="dashboard-wrapper">
-    <div class="dashboard-ecommerce">
-        <div class="container-fluid dashboard-content">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="page-header">
-                        <h2 class="pageheader-title">Histori Data</h2>
-                    </div>
-                </div>
+<div class="pc-container">
+    <div class="pc-content">
+      <!-- [ breadcrumb ] start -->
+      <div class="page-header">
+        <div class="page-block">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <div class="page-header-title">
+                <h5 class="m-b-10">Histori Data (API)</h5>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
 
             <?php if (isset($sensor_data['error'])): ?>
     <div class="alert alert-danger"><?= esc($sensor_data['error']) ?></div>
 <?php else: ?>
-    <table class="table table-bordered">
+    <div class="dt-responsive table-responsive">
+      <table id="add-row-table" class="table table-striped table-bordered nowrap">
         <thead>
             <tr>
                 <th>Tanggal</th>
@@ -40,17 +45,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
-    <!-- Pagination Manual -->
-    <?php if (isset($pager) && $pager['totalPages'] > 1): ?>
-        <nav>
-            <ul class="pagination">
-                <?php for ($i = 1; $i <= $pager['totalPages']; $i++): ?>
-                    <li class="page-item <?= ($i === $pager['currentPage']) ? 'active' : '' ?>">
-                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-                    </li>
-                <?php endfor; ?>
-            </ul>
-        </nav>
-    <?php endif; ?>
+</div>
 <?php endif; ?>
+</div>
+</div>
